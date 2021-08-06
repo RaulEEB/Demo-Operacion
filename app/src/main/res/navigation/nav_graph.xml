@@ -1,5 +1,51 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto" android:id="@+id/nav_graph">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    android:label="nav_graph"
+    app:startDestination="@id/main_fragment">
 
+    <activity
+        android:id="@+id/mainActivity"
+        android:name="com.innovapp.demoavan.presentation.view.activity.MainActivity"
+        android:label="activity_main"
+        tools:layout="@layout/activity_main" />
+    <fragment
+        android:id="@+id/main_fragment"
+        android:name="com.innovapp.demoavan.presentation.view.fragment.MainFragment"
+        android:label="main_fragment"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_splash_fragment_to_login_fragment"
+            app:destination="@id/login_fragment" />
+        <action
+            android:id="@+id/action_login_fragment_to_home_fragment"
+            app:destination="@id/home_activity" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_fragment"
+        android:name="com.innovapp.demoavan.presentation.view.fragment.LoginFragment"
+        android:label="login_fragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_fragment_to_newaccount_fragment"
+            app:destination="@id/newaccount_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newaccount_fragment"
+        android:name="com.innovapp.demoavan.presentation.view.fragment.NewAccountFragment"
+        android:label="newaccount_fragment"
+        tools:layout="@layout/fragment_new_account" />
+    <activity
+        android:id="@+id/splasActivity"
+        android:name="com.innovapp.demoavan.presentation.view.activity.SplashActivity"
+        android:label="splash_activity"
+        tools:layout="@layout/activity_splash" />
+
+    <activity android:id="@+id/home_activity"
+        android:name="com.innovapp.demoavan.presentation.view.activity.HomeActivity"
+        tools:layout="@layout/activity_home"
+        android:label="home_activity"
+        />
 </navigation>
