@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     package="com.innovapp.demoavan">
 
     <application
@@ -9,10 +10,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.DemoAvan">
+        <activity android:name=".presentation.view.activity.TeamMemberActivity"></activity>
         <activity
             android:name=".presentation.view.activity.HomeActivity"
             android:label="@string/title_activity_home"
-            android:theme="@style/Theme.DemoAvan.NoActionBar"></activity>
+            android:theme="@style/Theme.DemoAvan.NoActionBar" />
         <activity
             android:name=".presentation.view.activity.SplashActivity"
             android:theme="@style/SplashTheme">
@@ -23,6 +25,11 @@
             </intent-filter>
         </activity>
         <activity android:name=".presentation.view.activity.MainActivity" />
+
+        <service android:name=".presentation.view.service.intent.IntentServiceApp"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:exported="true"
+            tools:ignore="Instantiatable" />
     </application>
 
 </manifest>

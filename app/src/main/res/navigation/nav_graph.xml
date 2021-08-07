@@ -43,9 +43,22 @@
         android:label="splash_activity"
         tools:layout="@layout/activity_splash" />
 
-    <activity android:id="@+id/home_activity"
+    <activity
+        android:id="@+id/home_activity"
         android:name="com.innovapp.demoavan.presentation.view.activity.HomeActivity"
-        tools:layout="@layout/activity_home"
         android:label="home_activity"
-        />
+        tools:layout="@layout/activity_home" >
+    </activity>
+
+    <dialog
+        android:id="@+id/bottomSheetDialogTeam"
+        android:name="com.innovapp.demoavan.presentation.view.dialog.BottomSheetDialogTeam"
+        android:label="bottomSheetDialogTeam"
+        tools:layout="@layout/bottom_sheet_dialog_team" />
+
+    <activity
+        android:id="@+id/teamMemberActivity"
+        android:name="com.innovapp.demoavan.presentation.view.activity.TeamMemberActivity"
+        android:label="team_member_activity"
+        tools:layout="@layout/activity_team_member" />
 </navigation>
