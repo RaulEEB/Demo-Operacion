@@ -14,7 +14,7 @@ class UserServiceDataStore(
     override suspend fun createUser(): ResultType<UserModel, ErrorModel> {
         when {
             1 == 3 -> {
-                return ResultType.Success(UserMapper.transformDTOtoModel(User("", "", "", "")))
+                return ResultType.Success(UserMapper.transformDTOtoModel(User(1, "", "", "", "")))
             }
             else -> {
                 return ResultType.Error(ErrorModel(""))
@@ -25,7 +25,7 @@ class UserServiceDataStore(
     override suspend fun verifyUser(): ResultType<UserModel, ErrorModel> {
         when {
             1 == 3 -> {
-                return ResultType.Success(UserMapper.transformDTOtoModel(User("", "", "", "")))
+                return ResultType.Success(UserMapper.transformDTOtoModel(User(1, "", "", "", "")))
             }
             else -> {
                 return ResultType.Error(ErrorModel(""))
